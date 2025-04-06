@@ -1,0 +1,28 @@
+{
+  "name": "@talenthub/service-common",
+  "version": "1.0.0",
+  "description": "shared library for microservices",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.2",
+    "dotenv": "^16.4.7",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2",
+    "typeorm": "^0.3.22",
+    "winston": "^3.17.0",
+    "winston-logstash": "^1.2.1"
+  }
+}
