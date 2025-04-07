@@ -1,11 +1,12 @@
-import { config } from "dotenv";
-config();
+import dotenv from 'dotenv';
 
-export function checkEnvVariables(...requiredEnvVariables: string[]): void {
-  requiredEnvVariables.forEach((variable) => {
-    if (!process.env[variable]) {
-      console.error(`❌ Missing required environment variable: ${variable}`);
-      process.exit(1); // stop the app if a critical env is missing
-    }
-  });
+dotenv.config();
+
+export function checkEnvVariables(...requiredEnvVariables: string[]) {
+    requiredEnvVariables.forEach((variable) => {
+        if (!process.env[variable]) {
+            console.error(`Error: Missing required environment variable: '${variable}'`);
+            process.exit(1);
+        }
+    });
 }

@@ -11,3 +11,4 @@ function checkEnvVariables(...requiredEnvVariables) {
         }
     });
 }
+//# sourceMappingURL=envChecker.js.map
