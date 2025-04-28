@@ -7,7 +7,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "dev": "tsc --watch"
   },
   "files": [
     "dist",
@@ -17,15 +18,37 @@
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.13.2",
-    "dotenv": "^16.4.7",
+    "@grpc/grpc-js": "^1.13.3",
+    "dotenv": "^16.5.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.13.2",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.14.0",
     "typeorm": "^0.3.22",
     "winston": "^3.17.0",
     "winston-logstash": "^1.2.1"
-  }
+  },
+  "_moduleAliases": {
+    "@common/utils": "dist/utils",
+    "@common/logger": "dist/logger",
+    "@common/errors": "dist/app.errors.js",
+    "@common/token": "dist/token",
+    "@common/repository": "dist/repository"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tonykuriakose/TalentHub_shared-library.git"
+  },
+  "author": "TalentHub",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonykuriakose/TalentHub_shared-library/issues"
+  },
+  "homepage": "https://github.com/tonykuriakose/TalentHub_shared-library/#readme"
 }

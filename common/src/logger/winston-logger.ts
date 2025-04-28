@@ -1,8 +1,9 @@
 import winston from "winston";
 import LogstashTransport from "winston-logstash/lib/winston-logstash-latest.js";
+import TransportStream from "winston-transport"; 
 
 export const createLogger = (level: string, enableLogstash: boolean, logstash = {host: 'localhost', port: 5044}) => {
-    const transports = [
+    const transports: TransportStream[] = [ 
         new winston.transports.Console(),
     ];
 
